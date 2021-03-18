@@ -1,0 +1,440 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.containor{
+    height: 100vh;
+    color: white;
+    text-shadow:0 1px 2px rgba(0,0,0,0.1), 
+    0 2px 4px rgba(0,0,0,0.1), 
+    0 4px 8px rgba(0,0,0,0.1), 
+    0 8px 16px rgba(0,0,0,0.1),
+    0 16px 32px rgba(0,0,0,0.1), 
+    0 32px 64px rgba(0,0,0,0.1); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C8C3C3;
+    transition: 1s ease-in-out;
+    
+}
+
+
+
+
+
+.titletop{
+    display: flex;
+    flex-direction: row;
+}
+.toDoBoard{
+    /* display: none; */
+    height: 32rem;
+    width: 19rem;
+    position: absolute;
+    align-items: center;
+    background-color: rgb(201, 196, 196);
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1), 
+                0 2px 4px rgba(0,0,0,0.1), 
+                0 4px 8px rgba(0,0,0,0.1), 
+                0 8px 16px rgba(0,0,0,0.1),
+                0 16px 32px rgba(0,0,0,0.1), 
+                0 32px 64px rgba(0,0,0,0.1);
+}
+
+
+
+.seattingsBoard{
+    display: none;
+    height: 32rem;
+    width: 19rem;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(201, 196, 196);
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1), 
+                0 2px 4px rgba(0,0,0,0.1), 
+                0 4px 8px rgba(0,0,0,0.1), 
+                0 8px 16px rgba(0,0,0,0.1),
+                0 16px 32px rgba(0,0,0,0.1), 
+                0 32px 64px rgba(0,0,0,0.1);
+}
+
+
+.titletop{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#293745b9;
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px ;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1), 
+                0 2px 4px rgba(0,0,0,0.1), 
+                0 4px 8px rgba(0,0,0,0.1), 
+                0 8px 16px rgba(0,0,0,0.1),
+                0 16px 32px rgba(0,0,0,0.1), 
+                0 32px 64px rgba(0,0,0,0.1);
+}
+.menu{
+    flex: 1 1 40rem;
+    display: grid;
+    justify-content: flex-end;
+    margin: 10px;
+    font-size:26px;
+    color: white;
+    cursor: pointer;
+    transform-origin: center;
+
+}
+
+
+
+#maintitle{
+    cursor: pointer;
+    flex: 2 1 40rem;
+    display: grid;
+    justify-content: flex-start;
+    margin: 10px;
+    color: white;
+    font-weight: 800;
+    font-size: 22px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+
+    
+}
+
+.col-12{
+    margin-top: 2px;
+    padding: 5px;
+    
+}
+.input-group{
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1), 
+                0 2px 4px rgba(0,0,0,0.1), 
+                0 4px 8px rgba(0,0,0,0.1), 
+                0 8px 16px rgba(0,0,0,0.1),
+                0 16px 32px rgba(0,0,0,0.1), 
+                0 32px 64px rgba(0,0,0,0.1);
+}
+
+.col-12 .input-group .input-group-text{
+    background-color: #293745;
+    cursor: pointer;
+}
+#addicon{
+    font-size:16px;
+    color: white;
+}
+
+#alltodos{
+    margin: 1px;
+    max-width: 300px;
+    height: 400px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.options{
+    margin: 8px;
+    max-width: 300px;
+    height: 390px;
+}
+
+.option2{
+    display: flex;
+    margin-left: 10px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: bolder;
+    color: #293745;;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+  
+  /* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+  /* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 0px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #2196F3;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+.slider.round {
+    border-radius: 34px;
+}
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.option{
+    display: flex;
+    margin: 5px;
+}
+
+.option h4{
+    cursor: pointer;
+    flex: 1 1 40rem;
+    display: grid;
+    justify-content: flex-start;
+    margin: 10px;
+    text-shadow: none;
+    color: white;
+    font-weight: 800;
+    font-size: 22px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+
+}
+
+.option .switch{
+    flex: 1 1 10rem;
+}
+
+
+
+#alert{
+    position: absolute;
+    left: 73%;
+    top: 80%;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+    transition: 1s ease;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(71, 67, 67);
+    
+}
+
+
+#dltAll{
+    background-color: red;
+    border: none;
+    padding: 2px 10px 2px 10px;
+
+    display: flex;
+    font-size: 15px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content:space-around;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1), 
+                0 2px 4px rgba(0,0,0,0.1), 
+                0 4px 8px rgba(0,0,0,0.1), 
+                0 8px 16px rgba(0,0,0,0.1),
+                0 16px 32px rgba(0,0,0,0.1), 
+                0 32px 64px rgba(0,0,0,0.1);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+
+.fa-trash{
+    font-size: 18px;
+    padding: 5px;
+    
+}
+
+.fa-paper-plane{
+    font-size: 17px;
+    padding: 5px;
+    margin-right: 1px;
+}
+
+#contactMail{
+    padding: 2px 15px 2px 15px;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1), 
+                0 2px 4px rgba(0,0,0,0.1), 
+                0 4px 8px rgba(0,0,0,0.1), 
+                0 8px 16px rgba(0,0,0,0.1),
+                0 16px 32px rgba(0,0,0,0.1), 
+                0 32px 64px rgba(0,0,0,0.1);
+    transition: 1s ease-in-out;
+}
+
+#contactMail  {
+    font-size: 15px;
+    color: white;
+    background-color:#0B5ED7;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+
+#contactBox{
+    align-items: center;
+}
+
+/* Media quarry(s) */
+@media only screen and (min-width: 10px) and (max-width: 1024px){
+    .toDoBoard{
+        transition:0.1s ease-in-out;
+        visibility: hidden;
+        display:none;
+    }
+    .seattingsBoard{
+        transition:0.1s ease-in-out;
+        visibility: hidden;
+        display:none;
+    }
+    .nocontent{
+        visibility: visible;
+        display: block;
+    }
+    .nocontent h5,p{
+        font-family: monospace;
+    }
+    .containor{
+        background-color: black;
+    }
+}
+
+@media only screen and (min-width: 10px) and (max-width: 270px){
+    .nocontent h5,p{
+        font-family: monospace;
+        font-size: 10px;
+        margin: 8px;
+    }
+    .containor{
+        background-color: black;
+    }
+}
+
+@media only screen and (min-width: 271px) and (max-width: 411px){
+    .nocontent h5,p{
+        font-family: monospace;
+        font-size: 15px;
+        margin: 20px;
+
+    }
+    .containor{
+        background-color: black;
+    }
+}
+
+@media only screen and (min-width: 412px) and (max-width: 512px){
+    .nocontent h5,p{
+        font-family: monospace;
+        font-size: 18px;
+        margin: 20px;
+
+    }
+    .containor{
+        background-color: black;
+    }
+}
+
+
+@media only screen and (min-width: 513px) and (max-width: 613px){
+    .nocontent h5,p{
+        font-family: monospace;
+        font-size: 20px;
+        margin: 25px;
+        word-spacing: 5px;
+
+    }
+    .containor{
+        background-color: black;
+    }
+}
+
+
+@media only screen and (min-width: 614px) and (max-width: 800px){
+    .nocontent h5,p{
+        font-family: monospace;
+        font-size: 20px;
+        margin: 1px;
+
+    }
+    .containor{
+        background-color: black;
+    }
+}
+
+
+@media only screen and (min-width: 801px) and (max-width: 1024px){
+    .nocontent h5,p{
+        font-family: monospace;
+        font-size: 18px;
+        margin: 1px;
+
+    }
+    .containor{
+        background-color: black;
+    }
+}
+
+
+
+
+
+@media only screen and (min-width: 1028px) and (max-width: 2655px){
+    .nocontent{
+        visibility: hidden;
+    }
+}
